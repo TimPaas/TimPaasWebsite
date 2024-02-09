@@ -2,7 +2,7 @@
 
 body{
     margin: 0;
-    background-color: #191919;
+    background-color: #1d1c21;
 }
 
 .page {
@@ -26,10 +26,13 @@ body{
 .introduction-about_me{
     font-size: large;
     padding-top: 20vh;
+    z-index: 2;
+    position: relative;
+    z-index: 1;
 }
 
 .personalia {
-    background-color: #191919;
+    background-color: #1d1c21;
     width:auto;
     height: 100vh;
     display: flex;
@@ -39,7 +42,7 @@ body{
 }
 
 .profile {
-    background-color: #191919;
+    background-color: #1d1c21;
     width: 100%;
 }
 
@@ -54,6 +57,22 @@ body{
     top: 30%;
     right: 3%; 
 
+}
+
+.border-top-left {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    top: 1%;
+    left: 1%;
+}
+.border-bottom-right {
+    position: absolute;
+    height: 30vh;
+    width: 30vh;
+    bottom: 1%;
+    right: 1%;
+    z-index: 0;
 }
 
 .profile-content {
