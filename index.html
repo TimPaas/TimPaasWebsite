@@ -43,8 +43,16 @@
         <h1 class="introduction-name"> Tim Paas</h1> 
         <p class="introduction-description">Student Software Developer</p>
         <section class="section-about_me">
-        <p class="introduction-about_me">"Hello, I am Tim. A passionate programmer who is based in Steenwijk, The Netherlands. <br>I get along well with people and enjoy cooperative work.
+        <p class="introduction-about_me">"Hello, I am Tim. A passionate programmer who is based in Steenwijk, The Netherlands. I get along well with people and enjoy cooperative work.
             I like a challenging environment and I don't shy away from challenges."</p>
+        </section>
+        <section class="contact-info">
+        <img class="phone" src="images/Phone.png">
+        <p class="contact-info__phone">+31-(06)57432519</p>
+        <img class="mail" src="images/Mail.jpg">
+        <p class="contact-info__mail">Timpaas2004@gmail.com</p> 
+        <img class="house" src="images/House.png">
+        <p class="contact-info__residence">Steenwijk, The Netherlands</p>
         </section>
     </section>
 
@@ -52,19 +60,7 @@
 
         <section class="profile-content">
 
-            <div class="profile-content__category--hidden-mobile">
-                <h3 class="profile-content__category-title">Profiel</h3>
-                <hr>
-            </div>
 
-            <div class="profile-content__element--hidden-mobile">
-                <div class="profile-content__element-header">
-                </div>
-                <p class="profile-content__description">
-                    Als arts en developer ben ik bekwaam in het onderzoeken van
-                    de medische context en het zoeken van een technische oplossing.
-                <p>
-            </div>
 
             <div class="profile-content__category">
                 <h3 class="profile-content__category-title">Opleidingen</h3>
@@ -73,18 +69,21 @@
 
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
-                    <h4 class="profile-content__title">Farmacie</h4>
-                    <p class="profile-content__period">nov 2021 - mei 2022</p>
+                    <h4 class="profile-content__title">HAVO</h4>
+                    <p class="profile-content__period">Sep 2016 - Jul 2022</p>
                 </div>
-                <p class="profile-content__institute">Universiteit Utrecht, Utrecht</p>
+                <p class="profile-content__institute">                        Regionale Scholengemeenschap Tromp
+                    Meesters - Steenwijk <br>
+                    Profiel: Economie en Maatschappij <br>
+                    Niveau NLQF 4 / EQF 4</p>
             </div>
 
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
-                    <h4 class="profile-content__title">Onderzoeker</h4>
-                    <p class="profile-content__period">jan 2020 - feb 2021</p>
+                    <h4 class="profile-content__title">HBO-ICT</h4>
+                    <p class="profile-content__period">Sep 2022 - Heden</p>
                 </div>
-                <p class="profile-content__institute">Lindeboom instituut, Utrecht</p>
+                <p class="profile-content__institute">Hogeschool Windesheim - Zwolle</p>
             </div>
 
             <div class="profile-content__category--hidden-mobile">
@@ -112,7 +111,13 @@
 
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
-                    <h4 class="profile-content__title">Ik</h4>
+                    <ul>
+                    <li><h4 class="profile-content__title">Behulpzaam</h4></li>
+                    <li><h4 class="profile-content__title">Creatief</h4></li>
+                    <li><h4 class="profile-content__title">Punctueel</h4></li>
+                    <li><h4 class="profile-content__title">Probleem oplossend denkend</h4></li>
+                    <li><h4 class="profile-content__title">Kritisch denkend</h4></li>
+                    </ul>
                 </div>
             </div>
 
@@ -124,8 +129,14 @@
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
                     <ul>
-                        <li class="profile-content__">C#</li>
-                        <li class="profile-content__title"></li>
+                        <li class="profile-content__title">C#</li>
+                        <li class="profile-content__title">Java</li>
+                        <li class="profile-content__title">HTML / CSS</li>
+                        <li class="profile-content__title">SQL</li>
+                        <li class="profile-content__title">Python</li>
+                        <li class="profile-content__title">C++</li>
+                        <li class="profile-content__title">PHP</li>
+                        <li class="profile-content__title">Scrum</li>
                     </ul>
                 </div>
             </div>
@@ -133,7 +144,26 @@
             
 
         </section>
+        <div> 
+            <h3 class="contact-me"> Contact Me:</h3>
+            <form action="contactSomethingSomethingIDFK.html">
 
+                <label for="fname">First Name</label>
+                <input type="text" id="fname" name="firstname" placeholder="Your name.." required> <br>
+            
+                <label for="lname">Last Name</label>
+                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required> <br>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" placeholder="Your email adress.." required> <br>
+            
+                <label for="subject">Subject</label>
+                <textarea class="contact-me__message"id="subject" name="subject" placeholder="Write something.."></textarea> <br>
+
+                <input type="submit" value="Submit">
+            
+              </form>
+        </div>
     </section>
 </div>
 
