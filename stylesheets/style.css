@@ -177,8 +177,8 @@ a.navbar-brand {
 
 
   /* TEST !!!!!!!!!!!! */
-  input[type=text], input[type=email], select, textarea {
-    width: 30%; /* Full width */
+  .input-field, .input-field-subject, .contact-me__message {
+    width: 50%; /* Full width */
     padding: 12px; /* Some padding */ 
     border: 1px solid #ccc; /* Gray border */
     border-radius: 4px; /* Rounded borders */
@@ -187,13 +187,26 @@ a.navbar-brand {
     margin-bottom: 16px; /* Bottom margin */
     resize: vertical; 
   }
-  input[type=email] {
-    margin-left: 4vh;
+  input[type=email]{
+    margin-left: 37px;
+  }
+  
+  .input-field-subject{
+    margin-left: 23px;
+  }
+  .contact-me__message{
+    margin-top: 0;
+    margin-left: 11px;
+}
+  .message{
+    margin-bottom: 10px;
+    position: relative;
+    bottom:38px;
   }
   
   /* Style the submit button with a specific background color etc */
   input[type=submit] {
-    background-color: #04AA6D;
+    background-color: #1861ac;
     color: white;
     padding: 12px 20px;
     border: none;
@@ -205,7 +218,7 @@ a.navbar-brand {
 
   /* When moving the mouse over the submit button, add a darker green color */
   input[type=submit]:hover {
-    background-color: #45a049;
+    background-color: #1b6ec2;
   }
   
   /* Add a background color and some padding around the form */
@@ -255,7 +268,7 @@ a.navbar-brand {
 }
 
 .gdpr-consent__button--accept {
-    background-color: #d5f5d5;
+    background-color: #1861ac;
     padding: 10px;
     border-radius: 10px;
     border: 1px solid gray;
@@ -263,7 +276,7 @@ a.navbar-brand {
 }
 
 .gdpr-consent__button--accept:hover {
-    background-color: #c5e3c5;
+    background-color: #1b6ec2;
 }
 
 .gdpr-consent__button--reject {

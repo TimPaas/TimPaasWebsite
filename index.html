@@ -6,6 +6,8 @@
     <link rel="stylesheet" href="stylesheets/style.css">\
     <script defer src="js/gdpr.js"></script>
     <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
 </head>
 
 <body>
@@ -147,19 +149,22 @@
         </section>
         <div> 
             <h3 class="contact-me"> Contact Me:</h3>
-            <form action="contactSomethingSomethingIDFK.html">
+            <form>
 
                 <label for="fname">First Name</label>
-                <input type="text" id="fname" name="firstname" placeholder="Your name.." required> <br>
+                <input class="input-field" type="text" id="fname" name="firstname" placeholder="Your name.." required> <br>
             
                 <label for="lname">Last Name</label>
-                <input type="text" id="lname" name="lastname" placeholder="Your last name.." required> <br>
+                <input class="input-field" type="text" id="lname" name="lastname" placeholder="Your last name.." required> <br>
 
                 <label for="email">Email</label>
-                <input type="email" id="email" name="email" placeholder="Your email adress.." required> <br>
-            
+                <input class="input-field" type="email" id="email" name="email" placeholder="Your email adress.." required> <br>
+
                 <label for="subject">Subject</label>
-                <textarea class="contact-me__message"id="subject" name="subject" placeholder="Write something.."></textarea> <br>
+                <input class="input-field-subject" type="text" id="subject" name="subject" placeholder="The subject of your message.." required> <br>
+
+                <label class="message" for="Message">Message</label>
+                <textarea class="contact-me__message"id="Message" name="Message" placeholder="Write something.."required></textarea> <br>
 
                 <input type="submit" value="Submit">
             
@@ -186,6 +191,21 @@
 </section>
 </div>
 <!-- COOKIES -->
+
+<!-- CAPTCHA -->
+
+<script>
+    function onSubmit(token) {
+      document.getElementById("demo-form").submit();
+    }
+    
+  </script>
+
+<button class="g-recaptcha" 
+        data-sitekey="reCAPTCHA_site_key" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
+<!-- CAPTCHA -->
 </body>
 
 </html>
