@@ -241,7 +241,7 @@ a.navbar-brand {
     align-items: center;
     justify-content: center; /* Center vertically */
     position: fixed;
-    bottom:-10%;
+    top: 75%;
     left: 50%;
     transform: translate(-50%, -50%); /* Center horizontally and vertically */
     padding: 10px;
@@ -353,6 +353,7 @@ a.navbar-brand {
       }
       .gdpr-consent {
         width: 600px;
+        top: 90%;
       }
 
 
