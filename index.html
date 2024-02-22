@@ -147,7 +147,7 @@
         </section>
         <div> 
             <h3 class="contact-me"> Contact Me:</h3>
-            <form id="mail-service-form">
+            <form id="mail-service-form" action="Mailservice.cs" method="post">
 
                 <label for="fname">First Name</label>
                 <input class="input-field" type="text" id="fname" name="firstname" placeholder="Your name.." required> <br>
@@ -164,7 +164,7 @@
                 <label class="message" for="Message">Message</label>
                 <textarea class="contact-me__message"id="Message" name="Message" placeholder="Write something.."required></textarea> <br>
 
-                <button class="g-recaptcha" data-sitekey="6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" data-callback='onSubmit' data-action='submit'>Submit</button>
+                <button class="g-recaptcha" data-sitekey="6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" data-callback='onSubmit' data-action='submit' type="submit">Submit</button>
             
               </form>
         </div>
