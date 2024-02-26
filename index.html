@@ -73,7 +73,7 @@
                     <h4 class="profile-content__title">HAVO</h4>
                     <p class="profile-content__period">Sep 2016 - Jul 2022</p>
                 </div>
-                <p class="profile-content__institute"> Regionale Scholengemeenschap Tromp
+                <p class="profile-content__details"> Regionale Scholengemeenschap Tromp
                     Meesters - Steenwijk <br>
                     Profiel: Economie en Maatschappij <br>
                     Niveau NLQF 4 / EQF 4</p>
@@ -84,28 +84,28 @@
                     <h4 class="profile-content__title">HBO-ICT</h4>
                     <p class="profile-content__period">Sep 2022 - Heden</p>
                 </div>
-                <p class="profile-content__institute">Hogeschool Windesheim - Zwolle</p>
+                <p class="profile-content__details">Hogeschool Windesheim - Zwolle</p>
             </div>
 
-            <div class="profile-content__category--hidden-mobile">
+            <div class="profile-content__category">
                 <h3 class="profile-content__category-title">Werkervaring</h3>
                 <hr>
             </div>
             
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
-                    <h4 class="profile-content__title">Pakket bezorger - PostNL</h4>
+                    <h4 class="profile-content__details">Pakket bezorger - PostNL</h4>
                     <p class="profile-content__period"> 2023 - 2023 </p>
                 </div>
             </div>
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
-                    <h4 class="profile-content__title">Vakkenvuller, kassa medewerker en inkoper - Coop Nederland</h4>
+                    <h4 class="profile-content__details">Vakkenvuller, kassa medewerker en inkoper - Coop Nederland</h4>
                     <p class="profile-content__period"> 2020 - 2022</p>
                 </div>
             </div>
 
-            <div class="profile-content__category--hidden-mobile">
+            <div class="profile-content__category">
                 <h3 class="profile-content__category-title">Eigenschappen</h3>
                 <hr>
             </div>
@@ -113,16 +113,16 @@
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
                     <ul>
-                    <li><h4 class="profile-content__title">Behulpzaam</h4></li>
-                    <li><h4 class="profile-content__title">Creatief</h4></li>
-                    <li><h4 class="profile-content__title">Punctueel</h4></li>
-                    <li><h4 class="profile-content__title">Probleem oplossend denkend</h4></li>
-                    <li><h4 class="profile-content__title">Kritisch denkend</h4></li>
+                    <li><h4 class="profile-content__details">Behulpzaam</h4></li>
+                    <li><h4 class="profile-content__details">Creatief</h4></li>
+                    <li><h4 class="profile-content__details">Punctueel</h4></li>
+                    <li><h4 class="profile-content__details">Probleem oplossend denkend</h4></li>
+                    <li><h4 class="profile-content__details">Kritisch denkend</h4></li>
                     </ul>
                 </div>
             </div>
 
-            <div class="profile-content__category--hidden-mobile">
+            <div class="profile-content__category">
                 <h3 class="profile-content__category-title">Ervaren in</h3>
                 <hr>
             </div>
@@ -130,14 +130,14 @@
             <div class="profile-content__element">
                 <div class="profile-content__element-header">
                     <ul>
-                        <li class="profile-content__title">C#</li>
-                        <li class="profile-content__title">Java</li>
-                        <li class="profile-content__title">HTML / CSS</li>
-                        <li class="profile-content__title">SQL</li>
-                        <li class="profile-content__title">Python</li>
-                        <li class="profile-content__title">C++</li>
-                        <li class="profile-content__title">PHP</li>
-                        <li class="profile-content__title">Scrum</li>
+                        <li class="profile-content__details">C#</li>
+                        <li class="profile-content__details">Java</li>
+                        <li class="profile-content__details">HTML / CSS</li>
+                        <li class="profile-content__details">SQL</li>
+                        <li class="profile-content__details">Python</li>
+                        <li class="profile-content__details">C++</li>
+                        <li class="profile-content__details">PHP</li>
+                        <li class="profile-content__details">Scrum</li>
                     </ul>
                 </div>
             </div>
@@ -150,22 +150,22 @@
             <form id="mail-service-form" action="Mailservice.cs" method="post">
 
                 <label for="fname">First Name</label>
-                <input class="input-field" type="text" id="fname" name="firstname" placeholder="Your name.." required> <br>
+                <input class="input-field" type="text" id="firstname" name="firstname" placeholder="Your name.." required> <br>
             
                 <label for="lname">Last Name</label>
-                <input class="input-field" type="text" id="lname" name="lastname" placeholder="Your last name.." required> <br>
+                <input class="input-field" type="text" id="lastname" name="lastname" placeholder="Your last name.." required> <br>
 
                 <label for="email">Email</label>
                 <input class="input-field" type="email" id="email" name="email" placeholder="Your email adress.." required> <br>
 
                 <label for="subject">Subject</label>
-                <input class="input-field-subject" type="text" id="subject" name="subject" placeholder="The subject of your message.." required> <br>
+                <input class="input-field-subject" type="text" id="subject" name="subject" placeholder="The subject of your message.." maxlength="200" required> <br>
 
                 <label class="message" for="Message">Message</label>
-                <textarea class="contact-me__message"id="Message" name="Message" placeholder="Write something.."required></textarea> <br>
+                <textarea class="contact-me__message"id="Message" name="Message" placeholder="Write something.." maxlength="600" required></textarea> <br>
 
                 <button class="g-recaptcha" data-sitekey="6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" data-callback='onSubmit' data-action='submit' type="submit">Submit</button>
-            
+
               </form>
         </div>
     </section>

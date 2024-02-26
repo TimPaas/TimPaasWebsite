@@ -111,10 +111,11 @@ body{
     display: none;
 }
 
-.profile-content__institute {
-    color: #27384C;
-    margin-top: 0px;
-    font-size: 14px;
+.profile-content__details {
+    color: lightslategray;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-size: 18px;
 }
 .header-content {
     Color:#101010;
@@ -175,16 +176,14 @@ a.navbar-brand {
     z-index: 2;
   }
 
-
-  /* TEST !!!!!!!!!!!! */
   .input-field, .input-field-subject, .contact-me__message {
-    width: 50%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    width: 50%; 
+    padding: 12px; 
+    border: 1px solid #ccc;
+    border-radius: 4px; 
+    box-sizing: border-box; 
+    margin-top: 6px; 
+    margin-bottom: 16px; 
     resize: vertical; 
   }
   input[type=email]{
@@ -213,8 +212,6 @@ a.navbar-brand {
     border-radius: 4px;
     cursor: pointer;
   }
-  
-  /* TEST !!!!!!!!!!!!!!!!!!! */
 
   /* When moving the mouse over the submit button, add a darker green color */
   .g-recaptcha:hover {
