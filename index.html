@@ -5,7 +5,7 @@
         <title>CV Tim Paas</title>
         <link rel="stylesheet" href="stylesheets/style.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
-        <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" async defer></script>
     </head>
 
 <body>
@@ -198,7 +198,7 @@
                 <label class="message" for="Message">Message</label>
                 <textarea class="contact-me__message"id="Message" name="Message" placeholder="Write something.." maxlength="600" required></textarea> <br>
 
-                <button class="g-recaptcha" data-action='submit' data-sitekey="6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" type="submit">Submit</button>
+                <button class="g-recaptcha" data-action='submit' type="submit">Submit</button>
                 
 
               </form>
@@ -217,20 +217,38 @@
         </div>
  
         <div class="gdpr-consent__choice">
-            <button class="gdpr-consent__button--accept">Ja </button>
-            <button class="gdpr-consent__button--reject">Neen</button>
+            <button class="gdpr-consent__button--accept" data-sitekey="6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" onclick="handleAcceptClick()">Ja</button>
+            <button class="gdpr-consent__button--reject" data-sitekey="6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" onclick="handleRejectClick()">Neen</button>
         </div>
- 
-</section>
-</div>
-<!-- COOKIES -->
-
-<!-- CAPTCHA -->
-<script>
-    function onSubmit(token) {
-        document.getElementById("mail-service-form").submit();
-    }
-</script>
+        
+        <!-- COOKIES -->
+        
+        <!-- CAPTCHA -->
+        <script src="https://www.google.com/recaptcha/api.js?render=6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" async defer></script>
+        <script>
+            function handleAcceptClick() {
+                // Perform any other actions you want when the "Ja" button is clicked
+                // ...
+        
+                // Trigger reCAPTCHA verification
+                grecaptcha.execute('6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka');
+            }
+        
+            function handleRejectClick() {
+                // Perform any other actions you want when the "Neen" button is clicked
+                // ...
+        
+                // Trigger reCAPTCHA verification
+                grecaptcha.execute('6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka');
+            }
+        
+            function onSubmit(token) {
+                // Handle the reCAPTCHA response (This function is called after successful verification)
+                // You can perform any additional actions here, such as submitting a form or enabling functionality.
+                // ...
+            }
+        </script>
+        
 
 
 <!-- CAPTCHA -->
