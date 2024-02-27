@@ -175,9 +175,19 @@ a.navbar-brand {
     position: relative;
     z-index: 2;
   }
-
+  #confirmation-message {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #4CAF50; /* Green color */
+    color: white;
+    text-align: center;
+    padding: 10px;
+    display: none; /* Initially hidden */
+  }
   .input-field, .input-field-subject, .contact-me__message {
-    width: 50%; 
+    width: 60%; 
     padding: 12px; 
     border: 1px solid #ccc;
     border-radius: 4px; 
