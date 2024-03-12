@@ -131,15 +131,22 @@ a.navbar-brand {
     color: #0077cc;
   }
 
-  #3DObject canvas{
-    width: 100vw;
-    height: 100vw;
-    position: relative;
-    margin-top: 100px;
-    top: 0;
-    left: 0;
-  }
-  
+.TDObject{
+  width: 10px;
+  height: 10px;
+  position:absolute;
+  top:40px;
+  right: 100px;
+}
+#3DObject canvas {
+  position: absolute;
+  margin-top: 10px;
+  top: 0;
+  left: 0;
+  width: 100px !important; /* Override the width with !important */
+  height: 75px !important; /* Override the height with !important */
+}
+
   .btn-primary {
     color: #fff;
     background-color: #1b6ec2;
@@ -153,7 +160,7 @@ a.navbar-brand {
   }
 
   .contact-info{
-    width: 50vh;
+    width: 200px;
     height: 50px;
     position:absolute;
     top: 4vh;
@@ -183,6 +190,13 @@ a.navbar-brand {
   .contact-info__mail{
     position: relative;
     z-index: 2;
+    width: 200px;
+  }
+  .contact-info__phone{
+    width: 200px;
+  }
+  .contact-info__residence{
+    width: 200px;
   }
   #confirmation-message {
     position: fixed;
