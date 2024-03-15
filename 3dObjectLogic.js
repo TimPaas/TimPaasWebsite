@@ -7,7 +7,7 @@ const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerH
 let mouseX = window.innerWidth / 2;
 let mouseY = window.innerHeight / 2;
 let object;
-let isHovered = false;
+let isHovered = true;
 const originalRotationSpeed = 0.01; // Original rotation speed
 let rotationSpeed = 0.01; // Initial rotation speed
 
@@ -33,10 +33,6 @@ const renderer = new THREE.WebGLRenderer({ alpha: true });
 renderer.setSize(100, 150);
 document.getElementById('3DObject').appendChild(renderer.domElement);
 
-document.getElementById('3DObject').addEventListener('click', function () {
-  window.location.href = 'login.html';
-});
-
 camera.position.z = 500;
 
 const topLight = new THREE.DirectionalLight(0xffffff, 1);
@@ -61,7 +57,7 @@ function animate() {
   if (object && objToRender === 'TP Website logo') {
     if (isHovered) {
       // Gradually increase rotation speed when hovered
-      rotationSpeed = THREE.MathUtils.lerp(rotationSpeed, 0.5, 0.2); // Adjust the lerp factor
+      rotationSpeed = THREE.MathUtils.lerp(rotationSpeed, 0.55, 0.2); // Adjust the lerp factor
       isHovered = false;
     } else {
       // Gradually slow down to original speed when not hovered

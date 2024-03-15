@@ -6,7 +6,7 @@
         <link rel="stylesheet" href="stylesheets/style.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
         <script src="https://www.google.com/recaptcha/api.js?render=6Lcmr3IpAAAAAEGUgkz6w4joPBr7fBFYts0Mq8ka" async defer></script>
-
+        <script src="index.js" async defer></script>
     </head>
 
 <body>
@@ -38,11 +38,24 @@
 
 
 <div class="page">
-    <section class="personalia">
-        <a href="login.html">
-            <div class="TDObject" id="3DObject" tabindex="0"></div>
-            <script type="module" src="3dObjectLogic.js"></script>
+    <section class="unblurred">
+        <a onclick="menuFunction()">
+            <div class="TDObject blur-exclude" id="3DObject" tabindex="0"></div>
+            <script class="blur-exclude" type="module" src="3dObjectLogic.js"></script>
         </a>
+        <div class="blur-exclude" id="menuDiv">
+            <div class="center">
+                <a href="login.html">
+                <button class="loginButton">Log In</button>
+                </a>
+                <a href="register.html">
+                <button class="signUpButton">Sign Up</button>
+                </a>
+            </div>
+        </div>
+    </section>
+    
+    <section class="personalia" id="personalia">
         <img class="border-top-left" src="images/Border-Top-Left.jpg">
         <img class="border-bottom-right" src="images/Border-Bottom-Right.jpg">
         <img class="person-logo" src="images/CV Picture Tim Paas.jpg">
@@ -62,7 +75,7 @@
         </section>
     </section>
 
-    <section class="profile">
+    <section class="profile" id="profile">
 
         <section class="profile-content">
 
@@ -93,7 +106,7 @@
             </div>
 
             <div class="profile-content__category">
-                <h3 class="profile-content__category-title">Working expirence</h3>
+                <h3 class="profile-content__category-title">Working experience</h3>
                 <hr>
             </div>
             

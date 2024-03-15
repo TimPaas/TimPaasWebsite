@@ -1,5 +1,15 @@
 /*mobile version*/
 
+@keyframes fadeIn {
+  0% {opacity: 0;}
+  100% {opacity: 1;}
+}
+
+@keyframes fadeOut {
+  0% {opacity: 1;}
+  100% {opacity: 0;}
+}
+
 body{
     margin: 0;
     background-color: #1d1c21;
@@ -10,6 +20,15 @@ body{
     font-family: Arial;
     color: #DDDDDD;
 }
+.blur {
+  filter: blur(2px); /* Adjust the blur intensity as needed */
+  
+}
+
+.blur-exclude, .blur-exclude * {
+  filter: none !important; /* Remove blur effect for excluded elements and their children */
+}
+
 
 .introduction-name, .introduction-description, .introduction-about_me{
   margin: 0px;
@@ -38,11 +57,13 @@ body{
     flex-direction: column;
     padding-left: 3%;
     padding-right: 3%;
+    transition: 0.35s;
 }
 
 .profile {
     background-color: #1d1c21;
     width: 100%;
+    transition: 0.35s;
 }
 
 .person-logo {
@@ -131,20 +152,26 @@ a.navbar-brand {
     color: #0077cc;
   }
 
-.TDObject{
-  width: 10px;
-  height: 10px;
-  position:absolute;
-  top:40px;
-  right: 100px;
+  .unblurred{
+    position: relative;
+    z-index: 5;
+  }
+  .TDObject {
+    width: 10px;
+    height: 10px;
+    position: absolute;
+    top: 20px;
+    right: 100px;
+    display: inline-block; /* Ensure block display */
 }
+
 #3DObject canvas {
-  position: absolute;
-  margin-top: 10px;
-  top: 0;
-  left: 0;
-  width: 100px !important; /* Override the width with !important */
-  height: 75px !important; /* Override the height with !important */
+    position: absolute;
+    margin-top: 10px;
+    top: 0;
+    left: 0;
+    width: 100px !important; /* Override the width with !important */
+    height: 75px !important; /* Override the height with !important */
 }
 
   .btn-primary {
@@ -165,6 +192,19 @@ a.navbar-brand {
     position:absolute;
     top: 4vh;
     left: 8vh;
+  }
+#menuDiv{
+    position: absolute;
+    top: 100px;
+    right: 4px;
+    width: 140px;
+    height: 80px;
+    z-index: 5;
+    text-align: center; 
+    background-color: #404040;
+    display: none;
+    animation: fadeIn 0.35s;
+    border-radius: 10px;
   }
   .phone {
     height: 20px;
@@ -323,6 +363,40 @@ a.navbar-brand {
 .show{
     display: block;
 }
+
+button:hover {
+  opacity: 0.8;
+}
+.center {
+
+    margin: 0;
+    position: absolute;
+    top: 53%;
+    left: 50%;
+    width: 95%;
+    height: 95%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+
+}
+
+.loginButton, .signUpButton{
+  margin: 0;
+  margin-bottom: 3px;
+  width: 95%;
+  height: 45%
+}
+.loginButton{
+  background-color: #005BB7;
+  border-color: #679AE6;
+  border-radius: 10px;
+}
+.signUpButton{
+  border-color: #296a01;
+  border-radius: 7px;
+  background-color: #5a9e16;
+}
+  
 
 
 @media only screen and (min-width: 800px) {

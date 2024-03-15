@@ -3,31 +3,32 @@
     <head>
         <meta charset="UTF-8">
         <title>CV Tim Paas</title>
-        <link rel="stylesheet" href="stylesheets/loginStyle.css">
+        <link rel="stylesheet" href="stylesheets/registerStyle.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
     </head>
 
 <body>
   <img class="border-top-left" src="images/Border-Top-Left.jpg">
   <img class="border-bottom-right" src="images/Border-Bottom-Right.jpg">
-  <div class="loginLabelDiv">
-    <label class="loginLabel"><h1><b>Login</b></h1></label>
+  <div class="registerLabelDiv">
+    <label class="registerLabel"><h1><b>Sign Up</b></h1></label>
   </div>
     <form action="index.html" method="post">
 
 
       
         <div class="container">
+          <input type="text" placeholder="Enter username" name="usn" required>
           <input type="email" placeholder="Enter Email adress" name="email" required>
           <input type="password" placeholder="Enter Password" name="psw" required>
       
-          <button class="loginButton" type="submit">Login</button>
+          <button class="registerButton" type="submit">Sign Up</button>
         </div>
       
         <div class="container">
-          <label class="signUpLabel">No account? No problem!</label>
-          <a href="register.html">
-            <button type="button" class="signUpButton">Sign up</button>
+          <label class="loginLabel">Already have an account?</label>
+          <a href="login.html">
+            <button type="button" class="loginButton">Log in</button>
           </a>
           <a href="index.html">
           <button type="button" class="cancelbtn" >Cancel</button>

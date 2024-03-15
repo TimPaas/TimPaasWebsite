@@ -11,13 +11,13 @@ form {
     margin: 0 10% 0 10%
   }
 
-  .loginLabelDiv{
-    padding: 15% 35% 5% 35% ;
+  .registerLabelDiv{
+    padding: 10% 35% 2% 35% ;
     text-align: center;
     position: relative;
     z-index: 1;
   }
-  .loginLabel {
+  .registerLabel {
     font-family:'Times New Roman', Times, serif;
     color: white;
     z-index: 1;
@@ -46,7 +46,7 @@ form {
   left: 22vh;
 }
 
-  input[type=email], input[type=password] {
+  input[type=email], input[type=password], input[type=text]{
     width: 100%;
     padding: 12px 20px;
     margin: 15px 0;
@@ -54,6 +54,9 @@ form {
     border: 1px solid #ccc;
     box-sizing: border-box;
     border-radius: 8px;
+  }
+  input[type=text]{
+    margin-top: 0px;
   }
   
   button {
@@ -70,7 +73,7 @@ form {
     opacity: 0.8;
   }
 
-  .loginButton{
+  .registerButton{
     display:block;
     margin: 10px auto;
     background-color: #005BB7;
@@ -78,7 +81,7 @@ form {
     border-radius: 10px;
     
   }
-  .signUpButton{
+  .loginButton{
     display:block;
     margin: 0 auto;
     margin-top: 10px;
