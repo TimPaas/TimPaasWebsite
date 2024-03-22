@@ -17,7 +17,8 @@ form {
     position: relative;
     z-index: 1;
   }
-  .registerLabel {
+  
+  #registerLabel {
     font-family:'Times New Roman', Times, serif;
     color: white;
     z-index: 1;
@@ -38,12 +39,6 @@ form {
     bottom: 1%;
     right: 1%;
     z-index: -1;
-}
-.TDObject{
-  width: 10px;
-  height: 10px;
-  position:absolute;
-  left: 22vh;
 }
 
   input[type=email], input[type=password], input[type=text]{
@@ -118,6 +113,26 @@ form {
     float: right;
     padding-top: 16px;
   }
+  #ResponseMessageDiv {
+    position: relative;
+    left: 3%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    width: 90%;
+}
+
+#ErrorLabel {
+    color: red;
+    display: none;
+}
+
+#AccountMade {
+    color: green;
+    display: none;
+}
+
 
   @media screen and (max-width: 300px) {
     span.psw {

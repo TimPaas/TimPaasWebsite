@@ -5,18 +5,16 @@
         <title>CV Tim Paas</title>
         <link rel="stylesheet" href="stylesheets/registerStyle.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="register.js" async defer></script>
     </head>
 
 <body>
   <img class="border-top-left" src="images/Border-Top-Left.jpg">
   <img class="border-bottom-right" src="images/Border-Bottom-Right.jpg">
   <div class="registerLabelDiv">
-    <label class="registerLabel"><h1><b>Sign Up</b></h1></label>
+    <label id="registerLabel"><h1><b>Sign Up</b></h1></label>
   </div>
-    <form action="index.html" method="post">
-
-
-      
+    <form id="register-form" action="index.html" method="post">
         <div class="container">
           <input type="text" placeholder="Enter username" name="usn" required>
           <input type="email" placeholder="Enter Email adress" name="email" required>
@@ -36,8 +34,11 @@
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form> 
-        <div class="TDObject" id="3DObject" tabindex="0"></div>
-        <script type="module" src="3dObjectLogic.js"></script>
-      
+      <div id="ResponseMessageDiv">
+          <label id="ErrorLabel"></label>
+          <label id="AccountMade">Your account has been succesfully created</label>
+      </div>
+
+
 </body>
 </html>
