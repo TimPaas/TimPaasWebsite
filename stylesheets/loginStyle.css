@@ -116,6 +116,15 @@ form {
     padding-top: 16px;
   }
 
+  #ResponseMessageDiv {
+    position: relative;
+    left: 3%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    text-align: center;
+    width: 90%;
+}
   @media screen and (max-width: 300px) {
     span.psw {
       display: block;

@@ -124,6 +124,17 @@ document.addEventListener('click', function(event) {
 
     }
 }
+function LoginCheckArtboard() {
+    const token = localStorage.getItem('token');
+    console.log('token:', token); // Add this line to check the value of token
+    if (token) {
+        window.location.href = 'artboard.html';
+    } else {
+        window.location.href = 'login.html';
+    }
+}
+
+
 document.getElementById('mail-service-form').addEventListener('submit', handleSubmit);
 
 // Vue Logic
@@ -136,3 +147,21 @@ const app = Vue.createApp({
     }
 })
 app.mount('#page')
+
+const token = localStorage.getItem('token');
+console.log('token:', token); // Add this line to check the value of token
+var loginoutButton = document.getElementById("loginButton")
+if (token) {
+    loginoutButton.innerText = "Log Out"
+} else  {
+    loginoutButton.innerText = "Login"
+}
+function LoginPageCheck(){
+    if (!token){
+        window.location.href = "login.html"
+    }
+    else{
+        localStorage.removeItem('token');
+        location.reload();
+    }
+}

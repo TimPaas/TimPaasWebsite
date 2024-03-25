@@ -5,18 +5,18 @@
         <title>CV Tim Paas</title>
         <link rel="stylesheet" href="stylesheets/loginStyle.css">
         <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <script src="login.js" async defer></script>
+
     </head>
 
 <body>
   <img class="border-top-left" src="images/Border-Top-Left.jpg">
   <img class="border-bottom-right" src="images/Border-Bottom-Right.jpg">
   <div class="loginLabelDiv">
-    <label class="loginLabel"><h1><b>Login</b></h1></label>
+    <label class="loginLabel" ><h1><b>Login</b></h1></label>
   </div>
     <form id="login-form" method="post">
 
-
-      
         <div class="container">
           <input type="email" placeholder="Enter Email adress" name="email" required>
           <input type="password" placeholder="Enter Password" name="psw" required>
@@ -35,8 +35,8 @@
           <span class="psw">Forgot <a href="#">password?</a></span>
         </div>
       </form> 
-        <div class="TDObject" id="3DObject" tabindex="0"></div>
-        <script type="module" src="3dObjectLogic.js"></script>
-      
+      <div id="ResponseMessageDiv">
+      <label id="ErrorLabel"></label>
+      </div>
 </body>
 </html>

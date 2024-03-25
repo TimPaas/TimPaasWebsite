@@ -5,7 +5,6 @@ async function handleSubmit(event) {
     const formData = new FormData(document.getElementById('login-form'));
     const email = formData.get('email');
     const password = formData.get('psw');
-    console.WriteLine(email, password)
     try {
         const requestPromises = [];
         requestPromises.push(fetch('http://localhost:5122/api/Login', {
@@ -16,19 +15,33 @@ async function handleSubmit(event) {
                 password: password
             })
         }));
- 
+    
         const responses = await Promise.all(requestPromises);
- 
+    
         for (const response of responses) {
             if (response.ok) {
-                document.getElementById(loginLabel).color = "green";
+                var data = await response.json();
+                var token = data.token;
+                var username = data.username;
+                var id = data.id;
+                console.log(token);
+                console.log(username);
+                console.log(id);
+                console.log(data);
+                localStorage.setItem('token', token);
+                console.log(localStorage.getItem('token'));
+                document.getElementById("ErrorLabel").innerText = "Success! Welkom " + username;
             } else {
-                document.getElementById(loginLabel).color = "red";
+                document.getElementById("ErrorLabel").innerText = await response.text();
             }
         }
     } catch (error) {
+        // var errormessage = await response.text();
         document.getElementById("ErrorLabel").style.display = "none";
-        document.getElementById("ErrorLabel").innerText = "An unknown error occured, the server might be down. Contact the developer via the information on the main page.";
+        document.getElementById("ErrorLabel").innerText = "caught in a bad request";
         document.getElementById("ErrorLabel").style.display = "block";
+
     }
 }
+document.getElementById('login-form').addEventListener('submit', handleSubmit);
+console.log(localStorage.getItem('token'));
