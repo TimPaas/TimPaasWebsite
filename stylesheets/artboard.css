@@ -1,4 +1,26 @@
-.rondeButton{
-    width: 30px;
-    height: 30px;
+.container {
+  display: grid;
+  grid-template-columns: repeat(40, 20px); /* Adjust according to your preference */
+  grid-template-rows: repeat(40, 20px); /* Adjust according to your preference */
+}
+
+.pixel {
+  width: 18.66px;
+  height: 18.66px;
+  border: 1px solid #ddd;
+  
+}
+
+.color-picker {
+    position: fixed;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    margin-bottom: 20px; /* Adjust spacing as needed */
+    display: none;
+    
+  }  
+
+.color-picker input {
+  width: 100px;
 }

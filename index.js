@@ -150,12 +150,18 @@ app.mount('#page')
 
 const token = localStorage.getItem('token');
 console.log('token:', token); // Add this line to check the value of token
-var loginoutButton = document.getElementById("loginButton")
+var loginoutButton = document.getElementById("loginButton");
+var currentUser = document.getElementById("current-user");
 if (token) {
-    loginoutButton.innerText = "Log Out"
-} else  {
-    loginoutButton.innerText = "Login"
+    loginoutButton.innerText = "Log Out";
+    var username = localStorage.getItem("username");
+    currentUser.innerHTML = "Welcome <span class='text-shadows'>" + username + "!</span>";
+} else {
+    loginoutButton.innerText = "Log in";
+    currentUser.innerHTML = "Log in to access more features! Try pressing the <span class='text-shadows'>3D</span> logo...";
+    currentUser.style.top = "23px";
 }
+
 function LoginPageCheck(){
     if (!token){
         window.location.href = "login.html"

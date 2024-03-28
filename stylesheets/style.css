@@ -205,27 +205,36 @@ a.navbar-brand {
     display: none;
     animation: fadeIn 0.35s;
     border-radius: 10px;
+    
   }
   .phone {
     height: 20px;
     width: 20px;
     position: absolute;
-    top: 45px;
+    top: 54px;
     left: -22px; 
   }
   .mail{
     height: 28px;
     width: 28px;
     position: absolute;
-    top: 7.5vh;
+    top: 85px;
     left: -27px; 
   }
   .house{
     height: 28px;
     width: 28px;
     position: absolute;
-    top: 13vh;
+    top: 120px;
     left: -28px; 
+  }
+  #current-user{
+    position: absolute;
+    top: 36px;
+    left: 30px;
+    z-index: 5;
+    width: 235px;
+    font-family: "Comic Sans MS";
   }
   .contact-info__mail{
     position: relative;
@@ -233,7 +242,7 @@ a.navbar-brand {
     width: 200px;
   }
   .contact-info__phone{
-    margin-top: 51px;
+    margin-top: 55px;
     width: 200px;
   }
   .contact-info__residence{
@@ -344,6 +353,7 @@ a.navbar-brand {
     border-radius: 10px;
     border: 1px solid gray;
     font-family:'Times New Roman', Times, serif;
+    transition: 0.5s;
 }
 
 .gdpr-consent__button--accept:hover {
@@ -355,6 +365,7 @@ a.navbar-brand {
     border-radius: 10px;
     border: 1px solid gray;
     font-family:'Times New Roman', Times, serif;
+    transition: 0.5s;
 }
 
 .hide{
@@ -380,10 +391,13 @@ button:hover {
 }
 
 #loginButton, .signUpButton, .artboardButton{
+  position: relative;
   margin: 0;
   margin-bottom: 3px;
   width: 95%;
-  height: 30%
+  height: 30%;
+  transition: 0.5s;
+  z-index: 5;
 }
 #loginButton{
   background-color: #005BB7;
@@ -396,11 +410,89 @@ button:hover {
   background-color: #5a9e16;
 }
 .artboardButton{
-  background-color: rgb(255, 42, 42);
+  background-color: rgb(255, 42, 42); 
   border-radius: 10px;
   border-color:rgb(141, 39, 39);
 }
   
+:root {
+  --color-primary: #3d6cb9; /* Vibrant blue */
+  --color-secondary: #4b7dcf; /* Slightly lighter blue */
+  --color-tertiary: #5890e5; /* Another shade of blue */
+  --color-quaternary: #2a517f; /* Darker blue for contrast */
+  --color-quinary: #1c325a; /* Darkest blue */
+}
+
+
+.text-shadows {
+  text-shadow: 1.5px 1.5px 0 var(--color-secondary), 3px 3px 0 var(--color-tertiary),
+    4.5px 4.5px var(--color-quaternary), 6px 6px 0 var(--color-quinary);
+  font-family: bungee, sans-serif;
+  font-weight: 700; /* Adjusted font weight to make it thicker */
+  text-transform: uppercase;
+  font-size: calc(1rem + 2.5vw);
+  text-align: center;
+  margin: 0;
+  color: var(--color-primary);
+  animation: shadows 2s ease-in infinite;
+  letter-spacing: 0.2rem;
+}
+
+
+@keyframes shadows {
+  0% {
+    transform: translate(0, 0);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary);
+  }
+  10% {
+    transform: translate(-1.5px, -1.5px);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary);
+  }
+  20% {
+    transform: translate(-3px, -3px);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary);
+  }
+  30% {
+    transform: translate(-4.5px, -4.5px);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary), 4.5px 4.5px var(--color-quaternary);
+  }
+  40% {
+    transform: translate(-6px, -6px);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary), 4.5px 4.5px var(--color-quaternary),
+      6px 6px 0 var(--color-quinary);
+  }
+  50% {
+    transform: translate(-6px, -6px);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary), 4.5px 4.5px var(--color-quaternary),
+      6px 6px 0 var(--color-quinary);
+  }
+  60% {
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary), 4.5px 4.5px var(--color-quaternary),
+      6px 6px 0 var(--color-quinary);
+  }
+  70% {
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary), 4.5px 4.5px var(--color-quaternary);
+  }
+  80% {
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary),
+      3px 3px 0 var(--color-tertiary);
+  }
+  90% {
+    transform: translate(-1.5px, -1.5px);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary);
+  }
+  100% {
+    transform: translate(0, 0);
+    text-shadow: 1.5px 1.5px 0 var(--color-secondary);
+  }
+}
+
 
 
 @media only screen and (min-width: 800px) {

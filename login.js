@@ -29,8 +29,10 @@ async function handleSubmit(event) {
                 console.log(id);
                 console.log(data);
                 localStorage.setItem('token', token);
+                localStorage.setItem('id', id);
+                localStorage.setItem('username', username);
                 console.log(localStorage.getItem('token'));
-                document.getElementById("ErrorLabel").innerText = "Success! Welkom " + username;
+                window.location.href = "index.html"
             } else {
                 document.getElementById("ErrorLabel").innerText = await response.text();
             }
